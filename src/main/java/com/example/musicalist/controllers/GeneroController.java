@@ -18,6 +18,7 @@ import com.example.musicalist.modelo.Genero;
 import com.example.musicalist.services.GeneroService;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*")
 @RequestMapping("/Genero")
 @CrossOrigin
 public class GeneroController {

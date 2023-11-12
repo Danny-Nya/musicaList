@@ -19,11 +19,13 @@ import com.example.musicalist.services.AlbumService;
 
 @RestController
 @RequestMapping("/Album")
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*")
 public class AlbumController {
+
     @Autowired
     private AlbumService AlbumService;
     
+
     @GetMapping("/Lista")
     public List<AlbumDTO> lista(){
         return AlbumService.listar();
